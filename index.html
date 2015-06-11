@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+
+
+    <title>Mia Yoshida Portfolio</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Playfair+Display:400,400italic,700,900' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    
+        <link rel="stylesheet" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
+
+  </head>
+
+  <body>
+
+    <body ng-app="app" ng-controller="MainController">
+	
+		<div id="wrapper">
+			<main id="main">
+				<header ng-style="{ 'height' : viewportHeight*2 + 'px' }">
+					<div>
+						<h1>{{ message }}</h1>
+						<img src="img/profile.jpg" class="circle">
+						<h3 class="sub">Portfolio</h3>
+
+						<p>Born and raised in Spokane Washington, I graduated from Lewis and Clark High School and began my college career at Washington State University. After a year and a half of college I had the opportunity to travel and see family in Japan and New York. Wanting to finish my education, I decided to attend Eastern Washington University and major in a field that I felt is truly valuable.</p>
+						<p>Visual Communication Design</p>
+						<p></a></p>		
+					</div>
+				</header>
+				<article visible visible-model="article.visible"
+						 ng-class="{ 'visible' : article.visible }"
+						 ng-repeat="article in forests"
+						 ng-class-odd="'odd'">
+					<figure ng-style="{ 'background-image' : 'url(' + article.image + ')' }"></figure>
+					<main>
+					
+					<h3>{{ article.name }}</h3>
+						<h5 class="sub">{{ article.location }}</h5>
+						<p>{{ article.summary }}</p>
+					</main>
+				</article>
+				<footer ng-style="{ 'height' : viewportHeight*2 + 'px', 'margin-bottom' : 0 - viewportHeight + 'px' }">
+					<div>
+						
+						<h3 class="sub"></h3>
+						<h4>Contact Me</h4>
+						<form action="//formspree.io/myoshida@eagles.ewu.edu"
+      method="POST">
+  
+  
+<!-- Hidden Fields -->
+  <input type="hidden" name="_next" value="http://codepen.io/Mia1279/full/RPpaYy/" />
+
+    <input type="text" name="name">
+  
+    <input type="email" name="_replyto">
+  
+    <input type="submit" value="Send">
+
+  
+	</form>
+
+
+	<p></p>
+	<p>Scrolling code from <a href="http://codepen.io/Reklino/pen/KpmRRy">Scroll Like The Wind</a>.</p>						
+	</div>
+		</footer>
+			</main>
+		</div>
+	</div>
+</body>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-animate.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
